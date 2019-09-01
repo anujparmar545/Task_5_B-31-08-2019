@@ -8,11 +8,13 @@ public class Main {
 	static Scanner sc=new Scanner(System.in);
 	static ArrayList<Employee> list=new ArrayList<>();
 	
-	static Employee e1=new Employee(111,"AAA",1000,"TL","Software");
-	static Employee e2=new Employee(222,"BBB",2000,"TL","Sales");
-	static Employee e3=new Employee(333,"CCC",3000,"manager","Operations");
 	static Employee e4=new Employee(444,"DDD",4000,"hr","Consultant");
+	static Employee e1=new Employee(111,"AAA",1000,"TL","Software");
 	static Employee e5=new Employee(555,"EEE",5000,"accountant","Marketing");
+	static Employee e3=new Employee(333,"CCC",3000,"manager","Operations");
+	static Employee e2=new Employee(222,"BBB",2000,"TL","Sales");
+	
+	
 	
 	public static void main(String[] args) 
 	{
