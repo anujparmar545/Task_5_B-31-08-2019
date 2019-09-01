@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main {
@@ -126,13 +127,22 @@ public class Main {
 		
 		System.out.print("Enter employee id whom you want to search");
 		int eid=sc.nextInt();
-		for(Employee e:list)
+		int flag=0;
+		
+		Iterator<Employee> it=list.iterator();
+		while(it.hasNext())
 		{
-			if(eid==e.getEno())
-				System.out.println("[ Employee Id :"+e.getEno()+" Employee Name :"+e.getEname()+"Employee Salary :"
-						+ e.getSalary()+"Employee Designation :"+e.getDesignation()+"Employee Dept :"+e.getDept());
-			
+			Employee e=it.next();
+			if(eid==e.getEno()) {
+				flag=1;
+				System.out.println("[ Employee Id :"+e.getEno()+" Employee Name :"+e.getEname()+" Employee Salary :"
+						+ e.getSalary()+" Employee Designation :"+e.getDesignation()+" Employee Dept :"+e.getDept());
+		
+			}
 		}
+		if(flag==0)
+			System.out.println("No Employee Found with eno= "+eid);
+
 		
 		System.out.println();
 		
