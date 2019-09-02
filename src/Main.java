@@ -70,36 +70,16 @@ public class Main {
 
 	private static void sort() {
 		// TODO Auto-generated method stub
+		
+		
 		System.out.println("Enter Sorting Basis : eno or ename or salary or designation or dept");
-		String basis=sc.next();
+		SortByField.basis=sc.next();
 		System.out.println("Enter Sorting Order,asc or dsc");
-		String order=sc.next();
+		SortByField.order=sc.next();
 		 
-		if(basis.equals("eno")&&order.equals("asc"))
-			Collections.sort(list, new SortByEnoAsc());
-		if(basis.equals("eno")&&order.equals("asc"))
-			Collections.sort(list, new SortByEnoDsc());
+		Collections.sort(list, new SortByField());
 		
-		if(basis.equals("ename")&&order.equals("dsc"))
-			Collections.sort(list, new SortByEnameDsc());
-		if(basis.equals("ename")&&order.equals("asc"))
-			Collections.sort(list, new SortByEnameAsc());
 		
-		if(basis.equals("salary")&&order.equals("dsc"))
-			Collections.sort(list, new SortBySalDsc());
-		if(basis.equals("salary")&&order.equals("asc"))
-			Collections.sort(list, new SortBySalAsc());
-		
-		if(basis.equals("designation")&&order.equals("dsc"))
-			Collections.sort(list, new SortByDesigDsc());
-			if(basis.equals("designation")&&order.equals("asc"))
-				Collections.sort(list, new SortByDesigAsc());
-				
-			if(basis.equals("dept")&&order.equals("dsc"))
-				Collections.sort(list, new SortByDeptDsc());
-			if(basis.equals("dept")&&order.equals("asc"))
-				Collections.sort(list, new SortByDeptAsc());
-			
 			
 		viewEmployees();
 	}
