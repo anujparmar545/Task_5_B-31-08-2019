@@ -1,4 +1,3 @@
-import java.util.Collections;
 import java.util.Comparator;
 
 public class SortByField implements Comparator<Employee> {
@@ -39,15 +38,7 @@ public class SortByField implements Comparator<Employee> {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		return o1.getDept().compareTo(o2.getDept());
+		return o1.getEno()-o2.getEno();
 	}
 
 }
